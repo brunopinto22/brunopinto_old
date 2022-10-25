@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>Adventure Mania - Credits</title>
+<link rel="icon" type="image/png" href="Icon.png">
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+    
+html { /*gif as background*/
+  background: url(background2.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+    color: white;
+    font-size: 30px;
+	font-family:'Press Start 2P', cursive;
+    text-align: center;
+    text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+}
+
+.button {	/*button style*/
+	background-color: #b70000;
+	border-style: solid;
+    border-width: 10px;
+    border-color: white;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline.block;
+	font-size: 30px;
+	font-family:'Press Start 2P', cursive;
+	margin: 10px;
+	cursor: pointer;
+	transition: transform .2s;
+	-webkit-user-select: none; /* Safari 3.1+ */
+	-moz-user-select: none; /* Firefox 2+ */
+	-ms-user-select: none; /* IE 10+ */
+	user-select: none; /* Standard syntax */
+}
+
+.button:hover{	/*button color when cursor*/
+	background-color: #ff1818;
+	-ms-transform: scale(1.2, 1.1); 
+  	-webkit-transform: scale(1.2, 1.1); 
+  	transform: scale(1.2, 1.1); 
+}
+
+
+#title {	/*Title Style*/
+	text-shadow: -4px 0 white, 0 4px white, 4px 0 white, 0 -4px white;
+} 
+
+
+#menu{	/*Menu style*/
+	display: block;
+    position: relative;
+    bottom:-30px;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: white;
+	-webkit-user-select: none; /* Safari 3.1+ */
+	-moz-user-select: none; /* Firefox 2+ */
+	-ms-user-select: none; /* IE 10+ */
+	user-select: none; /* Standard syntax */
+}
+
+#returnMain {
+	position: relative;
+	bottom: -295px;
+	margin-left: 1320px;
+	margin-right: 20px;
+}
+
+</style>
+</head>
+<body>
+
+<div id="menu">
+    <p id="title" style="color: rgb(112, 22, 0); font-size: 230%;">-->Credits<--</p>
+    <br>
+    <p id>Web site developed by <br><br> Bruno Pinto</p>
+</div>
+
+<div id="returnMain">
+	<form method="get" action="index.html">
+		<button class="button">Main Menu</button>
+	</form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bruno Pinto</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/avatar.png">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="scss.css">
+  <link href="assets/fontawesome/css/all.css" rel="stylesheet">
+  
+</head>
+
+<body class="roboto">
+
+    
+  <header>
+
+    <div class="sidebar small" id="sidebar">
+      <button class="bitter" onclick="closesidebar()"><i class="fa-solid fa-xmark"></i></button>
+      <div class="container">
+        <div class="links">
+          <h1 class="bitter">Links</h1>
+          <a onclick="closesidebar()" href="#nav">Home</a>
+          <a onclick="closesidebar()" href="#skill">Skills</a>
+          <a onclick="closesidebar()" href="#work">Work</a>
+          <a onclick="closesidebar()" href="#about">About</a>
+        </div>
+
+        <div class="extras">
+          <h1 class="bitter">Extras</h1>
+          <a onclick="closesidebar()" href="https://www.isec.pt/" target="_blank">ISEC</a>
+          <a onclick="closesidebar()" href="https://www.esmcastilho.pt/" target="_blank">ESMC</a>
+          <a onclick="closesidebar()" href="https://www.critec.pt/inicio" target="_blank">Critec</a>
+        </div>
+
+        <div class="accounts">
+          <h1 class="bitter">Accounts</h1>
+          <a onclick="closesidebar()" href="https://open.spotify.com/user/2rlflj131gg9ytptxvcmfg00b?si=d13ba05a93934eb6" target="_blank"><i class="fa-brands fa-spotify"></i></a>
+          <a onclick="closesidebar()" href="https://discord.com/users/561281835561123870" target="_blank"><i class="fa-brands fa-discord"></i></a>
+          <a onclick="closesidebar()" href="https://github.com/brunopinto22" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a onclick="closesidebar()" href="https://www.linkedin.com/in/bruno-pinto-58b94b234/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a onclick="closesidebar()" href="https://www.instagram.com/bruno.pinto.20/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="easteregg" id="easter">
+      <button class="bitter" onclick="closeeaster()" ><i class="fa-solid fa-xmark"></i></button>
+      <h1 id="eastertext">Nice! You found <span id="score"></span> of 5! Keep exploring ;)</h1>
+      <h1 id="congrats" style="display: none;">Congrats!! You found all the easter eggs!</h1>
+    </div>
+
+    <nav id="nav">
+      <div class="logo bitter"><a href="">Bruno Pinto</a></div>
+      <div class="links">
+        <a href="#skill" class="big" >Skills</a>
+        <a href="#work" class="big">Work</a>
+        <a href="#about" class="big">About</a>
+        <button onclick="opensidebar()" class="small"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </nav>
+
+    <div class="banner">
+      <div>
+        <h1>Hi, I'm <span class="bitter accent">Bruno Pinto</span><br>And I'm a <span class="bitter gray">web developer</span></h1>
+        <a href="#contact" class="button big">Want to talk to me?</a>
+      </div>
+      <div class="avatar center">
+        <img src="assets/img/avatar.png" alt="avatar" id="avatar">
+      </div>
+      <a href="#contact" class="button small">Want to talk to me?</a>
+    </div>
+
+    <div class="scroll">
+      <a href="#skill">
+        <h1 class="source">Hey!Down here!</h1>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </div>
+
+  </header>
+
+  <div class="acc center">
+    <a href="#nav"><i class="fa-solid fa-chevron-up"></i></a>
+    <a href="https://github.com/brunopinto22" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/bruno-pinto-58b94b234/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/bruno.pinto.20/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <i class="line"></i>
+  </div>
+
+  <div class="container">
+
+    <div class="skill" id="skill">
+      <h1 class="bitter">Skills<br><span class="source">&knowledge</span></h1>
+
+      <h2 class="bitter">How its going</h2>
+      <h3>
+        Since my first ‘Hello World’ code, I’ve been in love with coding.
+        <br>While exploring for new languages, I fell in love with web-development by making a <a id="game" href="assets/Game_Website/index.html" target="_blank">game home screen</a>. 
+        <br>Since then I've learned more and more about front-end develpment and even doing an intership at <a class="link" href="https://www.critec.pt/inicio" target="_blank">Critec</a>.
+      </h3>
+      <h4 class="source">Even tho I love coding, its not my only passion in life. I love visual arts, image editing, video editing, 3d modeling and philosofy.</h4>
+
+      <div class="cards source">
+
+        <div class="card">
+          <h1>Coding</h1>
+          <h2>C</h2>
+          <div class="pr-border"><div class="pr" style="width: 80%;"></div></div>
+          <h2>C++</h2>
+          <div class="pr-border"><div class="pr" style="width: 62%;"></div></div>
+          <h2>Java</h2>
+          <div class="pr-border"><div class="pr" style="width: 44%;"></div></div>
+        </div>
+
+        <div class="card">
+          <h1>Web</h1>
+          <h2>HTML</h2>
+          <div class="pr-border"><div class="pr" style="width: 90%;"></div></div>
+          <h2>CSS / SCASS</h2>
+          <div class="pr-border"><div class="pr" style="width: 85%;"></div></div>
+          <h2>Javascript</h2>
+          <div class="pr-border"><div class="pr" style="width: 75%;"></div></div>
+        </div>
+
+        <div class="card">
+          <h1>Tools</h1>
+          <h2>Bootstrap</h2>
+          <div class="pr-border"><div class="pr" style="width: 77%;"></div></div>
+          <h2 id="blender">Blender</h2>
+          <div class="pr-border"><div class="pr" style="width: 82%;"></div></div>
+          <h2>Adobe XD</h2>
+          <div class="pr-border"><div class="pr" style="width: 66%;"></div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="work" id="work">
+      <h1 class="bitter">WORK<span class="source">&projects</span></h1>
+      
+      <div class="card" style="background-image: url(assets/img/Mianis.png);">
+        <a href="" target="_blank"><h2 class="roboto">Mianis</h2></a>
+      </div>
+
+      <div class="card" style="background-image: url(assets/img/REMAX.png);">
+        <a href="https://github.com/brunopinto22/REMAX-Website" target="_blank"><h2 class="roboto">REMAX copy</h2></a>
+      </div>
+
+      <div class="card" style="background-image: url(assets/img/Github.png);">
+        <a href="https://github.com/brunopinto22" target="_blank"><h2 class="roboto">More...</h2></a>
+      </div>
+    </div>
+
+    <div class="about" id="about">
+      <h1 class="bitter">About Me<br><span class="source">&more</span></h1>
+
+      <div class="me">
+        <div class="pfp">
+          <img id="pfp" src="assets/img/pfp.png">
+        </div>
+
+        <div class="desc">
+          <h2 class="bitter">Get to know me</h2>
+          <h3>
+            Hi I'm Bruno Pinto, nice to meet you!
+            <br>So you wanna know more about me? Alright then.
+            <br>
+            <br>I'm a Portuguese Web Dev that started to get to love Coding in <a class="link" href="https://www.esmcastilho.pt/" target="_blank">High School</a> during my Professional Course where I did an internship at <a class="link" href="https://www.critec.pt/inicio" target="_blank">Critec</a> and learned more about web dev and fell in love with it.
+            <br>After the Course I decided to follow my passion for Computer Science and pursued Computer Engineering at <a class="link" href="https://www.isec.pt/PT/Default.aspx" target="_blank">ISEC</a>.
+            <br>Along the way I made some projects that can be seen in my <a class="link" href="https://github.com/brunopinto22" target="_blank">GitHub</a>.
+            <br>
+            <br>But enought about my studies and professional life.
+            <br>What about my hobbies? 
+            <br>I love drawing and image manipulation, I have my drawings on my dedicaded Instagram: <a id="art" class="link" href="https://www.instagram.com/pintoiguess/" target="_blank">@pintoiguess</a>.
+          </h3>
+          <a href="#contact" class="button button_extra big"><span>Contact Me</span><i class="fa-solid fa-paper-plane"></i></a>
+        </div>
+
+      </div>
+    </div>
+    
+    <div class="contact" id="contact">
+      <h1 class="bitter">Contact Me</h1>
+
+      <div class="form">
+        <form class="source" id="form" action="https://formspree.io/f/xeqdraor" method="POST">
+          <input name="name" class="name" type="text" placeholder="Name">
+          <input name="email" class="email" type="email" placeholder="Email">
+          <input name="subject" class="subject" type="text" placeholder="Subject">
+          <textarea name="message" class="message" type="text" placeholder="Message"></textarea>
+
+          <button class="button button_extra" type="submit"><span>Send</span><i class="fa-solid fa-paper-plane"></i></button>
+          <span id="status"></span>
+        </form>
+
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13291.089749773697!2d-8.425253467066229!3d40.20915866677753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd22f90b10d57b11%3A0x471cfb8d64af7c28!2zUHJhw6dhIGRhIFJlcMO6YmxpY2E!5e0!3m2!1spt-PT!2spt!4v1665101403166!5m2!1spt-PT!2spt" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <footer>
+    <div class="links">
+
+      <div>
+        <h1 class="source">Links</h1>
+        <a href="#nav">Home</a>
+        <a href="#skill">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#about">About me</a>
+      </div>
+      <div>
+        <h1 class="source">Accounts</h1>
+        <div class="accounts">
+          <a href="https://open.spotify.com/user/2rlflj131gg9ytptxvcmfg00b?si=d13ba05a93934eb6" target="_blank"><i class="fa-brands fa-spotify"></i></a>
+          <a href="https://discord.com/users/561281835561123870" target="_blank"><i class="fa-brands fa-discord"></i></a>
+          <a href="https://github.com/brunopinto22" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/bruno-pinto-58b94b234/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/bruno.pinto.20/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <h1 class="source">Extras</h1>
+        <a href="https://www.isec.pt/" target="_blank">ISEC</a>
+        <a href="https://www.esmcastilho.pt/" target="_blank">ESMC</a>
+        <a href="https://www.critec.pt/inicio" target="_blank">Critec</a>
+      </div>
+
+    </div>
+    <div class="copyright">
+
+      <div class="avatar center">
+        <h1 class="bitter">Bruno Pinto</h1>
+        <h2 class="source">web developer</h2>
+        <img src="assets/img/avatar3.png" alt="avatar">
+        <h3 class="source">@<script>document.write(new Date().getFullYear())</script> brunopinto</h3>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <script src="js.js"></script>
+
+</body>
+
+</html>
