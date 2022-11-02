@@ -1,8 +1,13 @@
+const date = new Date();
+console.log(date);
+let day = date.getDate(); let month = date.getMonth() + 1;
+
 var audio = new Audio('assets\\easteregg.mp3');
 var audio2 = new Audio('assets\\easteregg_mega.mp3');
 let achivements = 0;
 let count = 0;
 let i = 0; let x = 0; let y = 0; let z = 0;
+
 
 /*---------------------------------------- SIDEBAR ----------------------------------------*/
 function opensidebar(){
@@ -39,7 +44,11 @@ document.getElementById("avatar").addEventListener("click",function addCount(){
     setTimeout("calleaster()", 500);
     setTimeout("closeeaster()", 4000);
   } else if(count == 22)
-    document.getElementById("avatar").src = "assets\\img\\avatar.png";
+    if(day >= 20 && month == 12)
+      document.getElementById("avatar").src = "assets\\img\\avatar_xmas.png";
+    else
+      document.getElementById("avatar").src = "assets\\img\\avatar.png";
+      
 });
 
 document.getElementById("game").addEventListener("click",function gameopened(){
@@ -127,4 +136,14 @@ function ajax(method, url, data, success, error) {
     }
   };
   xhr.send(data);
+}
+
+/*---------------------------------------- EVENTS ----------------------------------------*/
+
+if(day >= 20 && day <=31 && month == 12){
+  document.getElementById("style").href = 'assets\\events\\xmas.css';
+  document.getElementById("avatar").src = "assets\\img\\avatar_xmas.png";
+  document.getElementById("footer_avatar").src = "assets\\img\\avatar3_xmas.png";
+
+
 }
