@@ -141,9 +141,7 @@ function ajax(method, url, data, success, error) {
 /*---------------------------------------- EVENTS ----------------------------------------*/
 
 if(day >= 20 && day <=31 && month == 12){
-  document.getElementById("style").href = 'assets\\events\\xmas.css';
   document.getElementById("avatar").src = "assets\\img\\avatar_xmas.png";
   document.getElementById("footer_avatar").src = "assets\\img\\avatar3_xmas.png";
-
 
 }
