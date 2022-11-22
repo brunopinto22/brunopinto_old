@@ -141,7 +141,7 @@ html, body{
     color: $accent;
   }
 
-  .easteregg{
+  .easteregg,.nowplaying{
     position: fixed;
     padding: 2vh 1vw;
     border-radius: 8px;
@@ -162,6 +162,10 @@ html, body{
     button{padding-right: 15px;}
     span{
       font-size: 1em;
+    }
+    a{
+      color: $accent;
+      font-weight: 300;
     }
 
   }

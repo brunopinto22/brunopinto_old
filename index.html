@@ -14,7 +14,7 @@
   
 </head>
 
-<body class="roboto">
+<body class="roboto" onload="verifyEvents()">
 
     
   <header>
@@ -52,6 +52,10 @@
       <button class="bitter" onclick="closeeaster()" ><i class="fa-solid fa-xmark"></i></button>
       <h1 id="eastertext">Nice! You found <span id="score"></span> of 5! Keep exploring ;)</h1>
       <h1 id="congrats" style="display: none;">Congrats!! You found all the easter eggs!</h1>
+    </div>
+
+    <div class="nowplaying" id="player">
+      <h1>Now Playing: <a href="" id="nowplaying"></a></h1>
     </div>
 
     <nav id="nav">

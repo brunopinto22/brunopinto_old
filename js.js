@@ -140,8 +140,38 @@ function ajax(method, url, data, success, error) {
 
 /*---------------------------------------- EVENTS ----------------------------------------*/
 
-if(day >= 20 && day <=31 && month == 12){
-  document.getElementById("avatar").src = "assets\\img\\avatar_xmas.png";
-  document.getElementById("footer_avatar").src = "assets\\img\\avatar3_xmas.png";
+function verifyEvents(){
+  // Xmas
+  if(day >= 20 && day <=31 && month == 12){
+    var xmas = new Audio('assets\\let-it-snow-let-it-snow-let-it-snow-official-music-video.mp3');
+    document.getElementById("avatar").src = "assets\\img\\avatar_xmas.png";
+    document.getElementById("footer_avatar").src = "assets\\img\\avatar3_xmas.png";
+    palysong(xmas, "Frank Sinatra - Let It Snow! Let It Snow! Let It Snow!", "https://www.youtube.com/watch?v=sE3uRRFVsmc&ab_channel=FrankSinatraVEVO");
+  }
+
+  // Halloween
+  //...
+
+  // Portugal Day
+  //...
+}
+
+function opensong(){document.getElementById("player").style.transform = "translate(0,1vh)";}
+function closesong(){document.getElementById("player").style.transform = "translate(0,-15vh)";}
+
+function palysong(song, name, link){
+
+  document.getElementById("nowplaying").innerText = name;
+  document.getElementById("nowplaying").setAttribute('href', link);
+
+  song.volume = 0.1;
+  song.play();
+  song.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+  }, false);
+
+  setTimeout("opensong()", 500);
+  setTimeout("closesong()", 4000);
 
 }
