@@ -271,6 +271,7 @@ html .container .work .card::before, body .container .work .card::before {
   background: #fed259;
   height: 100%;
   left: 100%;
+  transition: ease-in-out 0.1s;
 }
 html .container .work .card:hover, body .container .work .card:hover {
   filter: grayscale(0);
