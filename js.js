@@ -188,19 +188,22 @@ function closesong(){document.getElementById("player").style.transform = "transl
 
 function palysong(song, name, link){
 
-  song.currentTime = 0
+    var r =confirm("Would You Like To Listen to Music?");
+    if (r == true) {
+      song.currentTime = 0
 
-  document.getElementById("nowplaying").innerText = name;
-  document.getElementById("nowplaying").setAttribute('href', link);
-
-  song.volume = 0.1;
-  song.play();
-  song.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-  }, false);
-
-  setTimeout("opensong()", 500);
-  setTimeout("closesong()", 4000);
+      document.getElementById("nowplaying").innerText = name;
+      document.getElementById("nowplaying").setAttribute('href', link);
+    
+      song.volume = 0.1;
+      song.play();
+      song.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+      }, false);
+    
+      setTimeout("opensong()", 500);
+      setTimeout("closesong()", 4000);
+    }
 
 }
