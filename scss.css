@@ -236,6 +236,7 @@ html .container .skill .cards, body .container .skill .cards {
 html .container .skill .cards .card, body .container .skill .cards .card {
   background: rgb(82, 78, 70);
   background: linear-gradient(232deg, rgb(82, 78, 70) 0%, rgb(65, 65, 65) 40%);
+  box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.1);
 }
 html .container .skill .cards .card h1, body .container .skill .cards .card h1 {
   text-align: left;
