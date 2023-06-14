@@ -17,6 +17,17 @@ function closesidebar(){
   document.getElementById("sidebar").style.width = "0";
 }
 
+
+/*----------------------------------------- TYPING -----------------------------------------*/
+var typed = new Typed('#typing', {
+  strings: ['web developer^1000', 'software engineer^1000', 'artist^1000'],
+  typeSpeed: 50,
+  backSpeed: 40,
+  loop: true,
+  loopCount: Infinity,
+});
+
+
 /*---------------------------------------- EASTEREGGS ----------------------------------------*/
 function calleaster(){
   console.log(achivements);

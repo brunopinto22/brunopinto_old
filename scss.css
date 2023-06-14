@@ -401,7 +401,7 @@ html footer .copyright h3, body footer .copyright h3 {
   }
   header .banner {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     padding: 5vh 8vw;
   }
   header .banner h1 {
