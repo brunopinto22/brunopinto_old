@@ -112,6 +112,59 @@ html .error, body .error {
 html .success, body .success {
   color: #fed259;
 }
+html .label, body .label {
+  display: inline-block;
+  background-color: #fed259;
+  color: #414141;
+}
+html .label-light, body .label-light {
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid #fed259;
+  color: #fed259;
+}
+html .red, body .red {
+  background-color: #dd5353;
+}
+html .blue, body .blue {
+  background-color: #537fdd;
+}
+html .light-blue, body .light-blue {
+  background-color: #57e4e9;
+}
+html .green, body .green {
+  background-color: #5af59a;
+}
+html .purple, body .purple {
+  background-color: #8853dd;
+}
+html .pink, body .pink {
+  background-color: #f182ad;
+}
+html .red-light, body .red-light {
+  color: #dd5353;
+  border-color: #dd5353;
+}
+html .blue-light, body .blue-light {
+  color: #537fdd;
+  border-color: #537fdd;
+}
+html .light-blue-light, body .light-blue-light {
+  color: #57e4e9;
+  border-color: #57e4e9;
+}
+html .green-light, body .green-light {
+  color: #5af59a;
+  border-color: #5af59a;
+}
+html .purple-light, body .purple-light {
+  color: #8853dd;
+  border-color: #8853dd;
+}
+html .pink-light, body .pink-light {
+  color: #f182ad;
+  border-color: #f182ad;
+}
 html .easteregg, html .nowplaying, body .easteregg, body .nowplaying {
   position: fixed;
   padding: 2vh 1vw;
@@ -160,6 +213,24 @@ html header nav .logo a, body header nav .logo a {
 }
 html header .banner, body header .banner {
   color: #e1e1e1;
+}
+html header .banner-404, body header .banner-404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+html header .banner-404 h1, body header .banner-404 h1 {
+  margin: 0;
+  font-size: 4em;
+  font-weight: 400;
+}
+html header .banner-404 h1 span, body header .banner-404 h1 span {
+  font-weight: 600;
+}
+html header .banner-404 h2, body header .banner-404 h2 {
+  font-size: 1.2em;
+  margin: 1vh 0 5vh;
 }
 html header .scroll, body header .scroll {
   width: 100vw;
@@ -255,33 +326,33 @@ html .container .work, body .container .work {
   background-size: cover;
   background-position: center;
 }
-html .container .work .card, body .container .work .card {
+html .container .work .cards, body .container .work .cards {
+  display: grid;
+}
+html .container .work .cards *, body .container .work .cards * {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+html .container .work .cards .card, body .container .work .cards .card {
+  cursor: pointer;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  filter: grayscale(100%);
-  cursor: pointer;
-}
-html .container .work .card a, body .container .work .card a {
+  box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.3);
   color: #e1e1e1;
-}
-html .container .work .card a:hover, body .container .work .card a:hover {
-  color: #e1e1e1;
-}
-html .container .work .card::before, body .container .work .card::before {
-  content: "";
-  position: absolute;
-  background: #fed259;
-  height: 100%;
-  left: 100%;
-  transition: ease-in-out 0.1s;
-}
-html .container .work .card:hover, body .container .work .card:hover {
-  filter: grayscale(0);
   transition: ease-in-out 0.2s;
 }
-html .container .work .card:hover::before, body .container .work .card:hover::before {
-  transition: ease-in-out 0.1s;
+html .container .work .cards .card *, body .container .work .cards .card * {
+  margin: 0;
+}
+html .container .work .cards .card div, body .container .work .cards .card div {
+  background: #414141;
+  background: linear-gradient(0deg, #414141 20%, rgba(65, 65, 65, 0.5) 70%, rgba(65, 65, 65, 0) 100%);
+}
+html .container .work .cards .card:hover, body .container .work .cards .card:hover {
+  color: #e1e1e1;
+  box-shadow: 0px 0px 35px -5px rgba(0, 0, 0, 0.5);
+  transition: ease-in-out 0.5s;
 }
 html .container .about h1, body .container .about h1 {
   text-align: center;
@@ -422,6 +493,11 @@ html footer .copyright h3, body footer .copyright h3 {
     height: 25vw;
     top: 22vh;
   }
+  header .banner-404 {
+    width: 40%;
+    height: 100vh;
+    margin: 0 30%;
+  }
   header .scroll {
     font-size: 2em;
     padding-bottom: 30vh;
@@ -507,26 +583,46 @@ html footer .copyright h3, body footer .copyright h3 {
   }
   .container .work {
     padding: 30vh 8vw;
+    text-align: center;
   }
-  .container .work .card {
-    width: 70vw;
-    height: 25vh;
-    padding: 0 2vw;
+  .container .work h1 {
+    text-align: center;
   }
-  .container .work .card h2 {
-    font-size: 8em;
+  .container .work *:nth-child(even) {
+    position: relative;
+    top: 30%;
+  }
+  .container .work .cards {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5vw;
+    padding: 0 0 10vh;
+    text-align: left;
+  }
+  .container .work .cards .card {
+    padding-top: 25vh;
+    border-radius: 16px 16px 20px 20px;
+  }
+  .container .work .cards .card div {
+    padding: 20vh 2vw 2vh;
+    border-radius: 0px 0px 16px 16px;
+  }
+  .container .work .cards .card div h2 {
+    font-size: 6em;
     font-weight: 700;
-    opacity: 0;
   }
-  .container .work .card:hover h2 {
-    transition: ease-in-out 0.1s;
-    opacity: 1;
+  .container .work .cards .card div .label {
+    font-size: 0.8em;
+    font-weight: 700;
+    margin: 0 0 1vh;
+    padding: 0.2vh 0.5vw;
+    border-radius: 10px;
   }
-  .container .work .card::before {
-    width: 0;
+  .container .work .button {
+    width: 12%;
+    display: inline-block;
   }
-  .container .work .card:hover::before {
-    width: 2vw;
+  .container .work .button i {
+    padding: 0 0 0 0.8vw;
   }
   .container .about {
     padding: 30vh 8vw;
@@ -656,6 +752,16 @@ html footer .copyright h3, body footer .copyright h3 {
   html .button_extra:hover span, body .button_extra:hover span {
     padding-right: 20px;
   }
+  html .easteregg, html .nowplaying, body .easteregg, body .nowplaying {
+    top: 3vh;
+    right: 2vw;
+    width: 90vw;
+    padding: 1vh 3vw;
+    font-size: 0.9em;
+  }
+  html .easteregg button, html .nowplaying button, body .easteregg button, body .nowplaying button {
+    padding-right: 5px;
+  }
   header .button {
     margin-top: 10vh;
   }
@@ -772,7 +878,12 @@ html footer .copyright h3, body footer .copyright h3 {
   header .banner .avatar::before {
     width: 50vw;
     height: 50vw;
-    top: 35vh;
+    top: 38vh;
+  }
+  header .banner-404 {
+    width: 90%;
+    height: 100vh;
+    margin: 0 5%;
   }
   header .scroll {
     font-size: 2em;
@@ -832,23 +943,43 @@ html footer .copyright h3, body footer .copyright h3 {
     height: 0.8vh;
   }
   .container .work {
-    padding: 5vh 5vw;
+    padding: 5vh 5vw 20vh;
     text-align: center;
   }
   .container .work h1 span {
     display: inline-block;
   }
-  .container .work .card {
-    height: 18vh;
-    padding: 1vh 5vw;
+  .container .work .cards {
+    grid-template-columns: 1fr;
+    grid-gap: 15vw;
+    padding: 0 0 6vh;
     text-align: left;
-    margin: 5vh 0;
   }
-  .container .work .card h2 {
-    font-size: 3em;
+  .container .work .cards .card {
+    padding-top: 25vh;
+    border-radius: 16px 16px 20px 20px;
+  }
+  .container .work .cards .card div {
+    padding: 10vh 5vw 3vh;
+    border-radius: 0px 0px 16px 16px;
+  }
+  .container .work .cards .card div h2 {
+    font-size: 5em;
     font-weight: 700;
-    opacity: 1;
-    margin: 0;
+  }
+  .container .work .cards .card div .label {
+    font-size: 0.8em;
+    font-weight: 700;
+    margin: 0 0 1vh;
+    padding: 0.2vh 2.2vw;
+    border-radius: 10px;
+  }
+  .container .work .button {
+    display: inline-block;
+    width: 55%;
+  }
+  .container .work .button i {
+    padding: 0 0 0 2vw;
   }
   .container .about {
     padding: 10vh 5vw;

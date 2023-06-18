@@ -143,6 +143,63 @@ html, body{
     color: $accent;
   }
 
+  .label{
+    display: inline-block;
+    background-color: $accent;
+    color: $light-bg;
+  }
+  .label-light{
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid $accent; 
+    color: $accent;
+  }
+
+  .red{
+    background-color: #dd5353;
+  }
+  .blue{
+    background-color: #537fdd;
+  }
+  .light-blue{
+    background-color: #57e4e9;
+  }
+  .green{
+    background-color: #5af59a;
+  }
+  .purple{
+    background-color: #8853dd;
+  }
+  .pink{
+    background-color: #f182ad;
+  }
+
+  .red-light{
+    color: #dd5353;
+    border-color: #dd5353;
+  }
+  .blue-light{
+    color: #537fdd;
+    border-color: #537fdd;
+  }
+  .light-blue-light{
+    color: #57e4e9;
+    border-color: #57e4e9;
+  }
+  .green-light{
+    color: #5af59a;
+    border-color: #5af59a;
+  }
+  .purple-light{
+    color: #8853dd;
+    border-color: #8853dd;
+  }
+  .pink-light{
+    color: #f182ad;
+    border-color: #f182ad;
+  }
+
+  
   .easteregg,.nowplaying{
     position: fixed;
     padding: 2vh 1vw;
@@ -201,6 +258,32 @@ html, body{
 
     .banner{
       color: $white;
+    }
+
+    .banner-404{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+
+      h1{
+        margin: 0;
+
+        font-size: 4em;
+        font-weight: 400;
+
+        span{
+          font-weight: 600;
+        }
+
+      }
+
+      h2{
+        font-size: 1.2em;
+        margin: 1vh 0 5vh;
+      }
+
     }
 
     .scroll{
@@ -342,37 +425,50 @@ html, body{
       background-size: cover;
       background-position: center;
 
-      .card{
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: cover;
-        filter: grayscale(100%);
-        cursor: pointer;
+      .cards{
+        display: grid;
 
-        a{
+        *{
+          height: fit-content;
+        }
+
+        .card{
+          
+          cursor: pointer;
+
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: cover;
+
+          -webkit-box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.3);
+          -moz-box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.3);
+          box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.3);
+
           color: $white;
+
+          transition: ease-in-out 0.2s;
+
+          *{
+            margin: 0;
+          }
+
+          div{
+            background: $light-bg;
+            background: linear-gradient(0deg, $light-bg 20%, rgba(65,65,65, 0.5) 70%, rgba(65,65,65,0) 100%);
+            
+          }
+  
           &:hover{
             color: $white;
+
+            -webkit-box-shadow: 0px 0px 35px -5px rgba(0,0,0,0.5);
+            -moz-box-shadow: 0px 0px 35px -5px rgba(0,0,0,0.5);
+            box-shadow: 0px 0px 35px -5px rgba(0,0,0,0.5);
+
+            transition: ease-in-out 0.5s;
           }
+  
         }
-
-        &::before{
-          content: '';
-          position: absolute;
-          background: $accent;
-          height: 100%;
-          left: 100%;
-          transition: ease-in-out 0.1s;
-        }
-
-        &:hover{
-          filter: grayscale(0);
-          transition: ease-in-out 0.2s;
-        }
-        &:hover::before{
-          transition: ease-in-out 0.1s;
-        }
-
       }
 
     }
@@ -580,6 +676,12 @@ html, body{
       }
 
     }
+
+    .banner-404{
+      width: 40%;
+      height: 100vh;
+      margin: 0 30%;
+    }
     
     .scroll{
       font-size: 2em;
@@ -693,30 +795,62 @@ html, body{
     .work{
       padding: 30vh $padding;
 
-      .card{
-        width: 70vw;
-        height: 25vh;
-        padding: 0 2vw;
+      text-align: center;
 
-        h2{
-          font-size: 8em;
-          font-weight: 700;
-          opacity: 0;
-        }
+      h1{
+        text-align: center;
+      }
 
-        &:hover{
-          h2{
-            transition: ease-in-out 0.1s;
-            opacity: 1;
+      *:nth-child(even) {
+        position: relative;
+        top: 30%;
+      }
+        
+      .cards{
+
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5vw;
+
+        padding: 0 0 10vh;
+
+        text-align: left;
+
+        .card{
+          padding-top: 25vh;
+          border-radius: 16px 16px 20px 20px;
+
+          div{
+            padding: 20vh 2vw 2vh;
+            border-radius: 0px 0px 16px 16px;
+
+            h2{
+              font-size: 6em;
+              font-weight: 700;
+            }
+
+            .label{
+              font-size: 0.8em;
+              font-weight: 700;
+
+              margin: 0 0 1vh;
+              padding: 0.2vh 0.5vw;
+              border-radius: 10px;
+            }
+
           }
+
         }
-        &::before{
-          width: 0;
-        }
-        &:hover::before{
-          width: 2vw;
+
+      }
+
+      .button{
+        width: 12%;
+        display: inline-block;
+        i{
+          padding: 0 0 0 0.8vw;
         }
       }
+
 
     }
 
@@ -887,6 +1021,20 @@ html, body{
         }
       }
     }
+
+    .easteregg,.nowplaying{
+      top: 3vh;
+      right: 2vw;
+      width: 90vw;
+      padding: 1vh 3vw;
+      font-size: 0.9em;
+
+      button{
+        padding-right: 5px;
+      }
+
+    }
+
   }
 
   header{
@@ -1027,10 +1175,16 @@ html, body{
         &::before{
           width: 50vw;
           height: 50vw;
-          top: 35vh;
+          top: 38vh;
         }
       }
 
+    }
+
+    .banner-404{
+      width: 90%;
+      height: 100vh;
+      margin: 0 5%;
     }
     
     .scroll{
@@ -1106,7 +1260,7 @@ html, body{
     }
 
     .work{
-      padding: 5vh $padding;
+      padding: 5vh $padding 20vh;
       text-align: center;
 
       h1{
@@ -1114,18 +1268,49 @@ html, body{
           display: inline-block;
         }
       }
+        
+      .cards{
 
-      .card{
-        height: 18vh;
-        padding: 1vh 5vw;
+        grid-template-columns: 1fr;
+        grid-gap: 15vw;
+
+        padding: 0 0 6vh;
+
         text-align: left;
-        margin: 5vh 0;
 
-        h2{
-          font-size: 3em;
-          font-weight: 700;
-          opacity: 1;
-          margin: 0;
+        .card{
+          padding-top: 25vh;
+          border-radius: 16px 16px 20px 20px;
+
+          div{
+            padding: 10vh 5vw 3vh;
+            border-radius: 0px 0px 16px 16px;
+
+            h2{
+              font-size: 5em;
+              font-weight: 700;
+            }
+
+            .label{
+              font-size: 0.8em;
+              font-weight: 700;
+
+              margin: 0 0 1vh;
+              padding: 0.2vh 2.2vw;
+              border-radius: 10px;
+            }
+
+          }
+
+        }
+
+      }
+
+      .button{
+        display: inline-block;
+        width: 55%;
+        i{
+          padding: 0 0 0 2vw;
         }
       }
 
