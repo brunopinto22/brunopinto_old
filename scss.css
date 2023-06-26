@@ -709,6 +709,7 @@ html footer .copyright h3, body footer .copyright h3 {
     font-size: 2.5vh;
   }
   footer .links .accounts * {
+    display: inline-block;
     line-height: 1em;
   }
   footer .copyright {
