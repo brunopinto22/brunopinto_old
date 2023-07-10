@@ -20,7 +20,7 @@ function closesidebar(){
 
 /*----------------------------------------- TYPING -----------------------------------------*/
 var typed = new Typed('#typing', {
-  strings: ['web developer^1000', 'software engineer^1000', '"web designer"^1000'],
+  strings: ['web developer^1000', 'software engineer^1000', 'web designer^1000'],
   typeSpeed: 50,
   backSpeed: 40,
   loop: true,
