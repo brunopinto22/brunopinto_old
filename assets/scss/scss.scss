@@ -95,31 +95,33 @@ html, body{
 
   }
 
-  .button_extra{
+  .button_extra {
     display: block;
     text-align: center;
-    transition: 0.3s ease-in-out;
-
-    i{
+    transition: all 0.3s ease-in-out;
+  
+    i {
       color: $bg;
-      position: absolute;
       opacity: 0;
-      transition: 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
     }
-
-    span{padding-right: 0;}
-
-    &:hover{
-
-      span{
+  
+    span {
+      padding-right: 0;
+      transition: all 0.2s ease-in-out;
+    }
+  
+    &:hover {
+      transition: all 0.2s ease-in-out;
+  
+      span {
         color: $bg;
-        transition: 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
       }
-
-      i{
-        position: relative;
+  
+      i {
         opacity: 1;
-        transition: 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
       }
     }
   }
@@ -378,6 +380,10 @@ html, body{
       a{
         color: inherit;
         cursor: default;
+        transition: all ease-in-out 0.15s;
+        &:hover{
+          color: $accent;
+        }
       }
 
       .link{
@@ -388,7 +394,6 @@ html, body{
         display: grid;
 
         .card{
-          background: $light-bg;
           background: linear-gradient(232deg, rgba($accent,0.1) 0%, rgba($light-bg ,1) 40%); 
 
           @include shadow(0px,0px,30px,-5px,rgba(0,0,0,0.1));
@@ -444,9 +449,8 @@ html, body{
           }
 
           div{
-            background: $light-bg;
             background: linear-gradient(0deg, $light-bg 20%, rgba($light-bg , 0.5) 70%, rgba($light-bg ,0) 100%);
-            
+
           }
   
           &:hover{
@@ -590,6 +594,7 @@ html, body{
 
     .button_extra{
       width: 20vw;
+      span{padding-right: 0;}
       &:hover{
         span{
           padding-right: 20px;
@@ -863,6 +868,12 @@ html, body{
 
         .button_extra{
           width: 20vw;
+          span{padding-right: 0;}
+          &:hover{
+            span{
+              padding-right: 20px;
+            }
+          }
         }
 
       }
@@ -1004,6 +1015,7 @@ html, body{
     }
     .button_extra{
       padding: 10px 0;
+      span{padding-right: 0;}
 
       &:hover{
 
@@ -1100,7 +1112,6 @@ html, body{
       width: -webkit-fill-available;
       grid-template-columns: 2fr 1fr;
       padding: 3vh 5vw;
-      background: $bg;
       background: linear-gradient(180deg, #242424 0%, rgba($bg, 0) 100%); 
       z-index: 100;
 

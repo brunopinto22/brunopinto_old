@@ -85,25 +85,27 @@ html .link:hover, body .link:hover {
 html .button_extra, body .button_extra {
   display: block;
   text-align: center;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 html .button_extra i, body .button_extra i {
   color: #3a3a3a;
-  position: absolute;
   opacity: 0;
-  transition: 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 html .button_extra span, body .button_extra span {
   padding-right: 0;
+  transition: all 0.2s ease-in-out;
+}
+html .button_extra:hover, body .button_extra:hover {
+  transition: all 0.2s ease-in-out;
 }
 html .button_extra:hover span, body .button_extra:hover span {
   color: #3a3a3a;
-  transition: 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 html .button_extra:hover i, body .button_extra:hover i {
-  position: relative;
   opacity: 1;
-  transition: 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 html .error, body .error {
   color: #dd5353;
@@ -301,6 +303,10 @@ html .container .skill h4 a, body .container .skill h4 a {
 html .container .skill a, body .container .skill a {
   color: inherit;
   cursor: default;
+  transition: all ease-in-out 0.15s;
+}
+html .container .skill a:hover, body .container .skill a:hover {
+  color: #fed259;
 }
 html .container .skill .link, body .container .skill .link {
   cursor: pointer;
@@ -309,7 +315,6 @@ html .container .skill .cards, body .container .skill .cards {
   display: grid;
 }
 html .container .skill .cards .card, body .container .skill .cards .card {
-  background: #404040;
   background: linear-gradient(232deg, rgba(254, 210, 89, 0.1) 0%, #404040 40%);
   box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.1);
@@ -354,7 +359,6 @@ html .container .work .cards .card *, body .container .work .cards .card * {
   margin: 0;
 }
 html .container .work .cards .card div, body .container .work .cards .card div {
-  background: #404040;
   background: linear-gradient(0deg, #404040 20%, rgba(64, 64, 64, 0.5) 70%, rgba(64, 64, 64, 0) 100%);
 }
 html .container .work .cards .card:hover, body .container .work .cards .card:hover {
@@ -456,6 +460,9 @@ html footer .copyright h3, body footer .copyright h3 {
   }
   html .button_extra, body .button_extra {
     width: 20vw;
+  }
+  html .button_extra span, body .button_extra span {
+    padding-right: 0;
   }
   html .button_extra:hover span, body .button_extra:hover span {
     padding-right: 20px;
@@ -652,6 +659,12 @@ html footer .copyright h3, body footer .copyright h3 {
   .container .about .desc .button_extra {
     width: 20vw;
   }
+  .container .about .desc .button_extra span {
+    padding-right: 0;
+  }
+  .container .about .desc .button_extra:hover span {
+    padding-right: 20px;
+  }
   .container .contact {
     padding: 30vh 8vw;
   }
@@ -762,6 +775,9 @@ html footer .copyright h3, body footer .copyright h3 {
   html .button_extra, body .button_extra {
     padding: 10px 0;
   }
+  html .button_extra span, body .button_extra span {
+    padding-right: 0;
+  }
   html .button_extra:hover span, body .button_extra:hover span {
     padding-right: 20px;
   }
@@ -840,7 +856,6 @@ html footer .copyright h3, body footer .copyright h3 {
     width: -webkit-fill-available;
     grid-template-columns: 2fr 1fr;
     padding: 3vh 5vw;
-    background: #3a3a3a;
     background: linear-gradient(180deg, #242424 0%, rgba(58, 58, 58, 0) 100%);
     z-index: 100;
   }
