@@ -50,15 +50,15 @@ document.getElementById("avatar").addEventListener("click",function addCount(){
   count++;
 
   if(count == 12){
-    document.getElementById("avatar").src = "assets\\img\\avatar2.png";
+    document.getElementById("avatar").src = "assets\\img\\avatars\\avatar2.png";
     achivements++;
     setTimeout("calleaster()", 500);
     setTimeout("closeeaster()", 4000);
   } else if(count == 22)
     if(day >= 20 && month == 12)
-      document.getElementById("avatar").src = "assets\\img\\avatar_xmas.png";
+      document.getElementById("avatar").src = "assets\\img\\avatars\\avatar_xmas.png";
     else
-      document.getElementById("avatar").src = "assets\\img\\avatar.png";
+      document.getElementById("avatar").src = "assets\\img\\avatars\\avatar.png";
       
 });
 
@@ -153,38 +153,10 @@ function ajax(method, url, data, success, error) {
 
 function verifyEvents(){
   // Xmas
-  if(day >= 19 && day <=31 && month == 12){
-    var link = document.createElement( "link" );
-    link.href = "assets/xmas.css";
-    link.type = "text/css";
-    link.rel = "stylesheet";
-    link.media = "screen,print";
-
-    document.getElementsByTagName( "head" )[0].appendChild( link );
-    var xmas = new Audio('assets\\let-it-snow-let-it-snow-let-it-snow-official-music-video.mp3');
-    document.getElementById("avatar").src = "assets\\img\\avatar_xmas.png";
-    document.getElementById("footer_avatar").src = "assets\\img\\avatar3_xmas.png";
-    palysong(xmas, "Frank Sinatra - Let It Snow! Let It Snow! Let It Snow!", "https://www.youtube.com/watch?v=sE3uRRFVsmc&ab_channel=FrankSinatraVEVO");
-
-    setInterval(createSnowFlake, 50);
-
-    function createSnowFlake() {
-      const snow_flake = document.createElement("p");
-      snow_flake.classList.add("fas");
-      snow_flake.classList.add("fa-snowflake");
-      snow_flake.style.left = Math.random() * window.innerWidth + "px";
-      snow_flake.style.animationDuration = Math.random() * 8 + 3 + "s";
-      snow_flake.style.opacity = Math.random();
-      snow_flake.style.fontSize = Math.random() * 5 + 8 + "px";
-
-      document.body.appendChild(snow_flake);
-
-      setTimeout(() => {
-        snow_flake.remove();
-      }, 5000);
-    }
-
-  }
+  if(day >= 19 && day <=31 && month == 12)
+    XMAS();
+  else if(day >= 30 && day <=31 && month == 10)
+    HALLOWEEN();
 
   // Halloween
   //...
@@ -216,5 +188,51 @@ function palysong(song, name, link){
       setTimeout("opensong()", 500);
       setTimeout("closesong()", 4000);
     }
+
+}
+
+
+const XMAS = () =>{
+  
+  var link = document.createElement( "link" );
+  link.href = "assets/xmas.css";
+  link.type = "text/css";
+  link.rel = "stylesheet";
+  link.media = "screen,print";
+  document.getElementsByTagName( "head" )[0].appendChild( link );
+
+  document.getElementById("avatar").src = "assets\\img\\avatars\\avatar_xmas.png";
+  document.getElementById("footer_avatar").src = "assets\\img\\avatars\\avatar3_xmas.png";
+
+  var song = new Audio('assets\\let-it-snow-let-it-snow-let-it-snow-official-music-video.mp3');
+  palysong(song, "Frank Sinatra - Let It Snow! Let It Snow! Let It Snow!", "https://www.youtube.com/watch?v=sE3uRRFVsmc&ab_channel=FrankSinatraVEVO");
+
+  setInterval(createSnowFlake, 50);
+
+  function createSnowFlake() {
+    const snow_flake = document.createElement("p");
+    snow_flake.classList.add("fas");
+    snow_flake.classList.add("fa-snowflake");
+    snow_flake.style.left = Math.random() * window.innerWidth + "px";
+    snow_flake.style.animationDuration = Math.random() * 8 + 3 + "s";
+    snow_flake.style.opacity = Math.random();
+    snow_flake.style.fontSize = Math.random() * 5 + 8 + "px";
+
+    document.body.appendChild(snow_flake);
+
+    setTimeout(() => {
+      snow_flake.remove();
+    }, 5000);
+  }
+
+}
+
+
+const HALLOWEEN = () =>{
+  
+  document.getElementById("avatar").src = "assets\\img\\avatars\\avatar_hlw.png";
+  document.getElementById("footer_avatar").src = "assets\\img\\avatars\\avatar3_hlw.png";
+  //var song = new Audio('assets\\let-it-snow-let-it-snow-let-it-snow-official-music-video.mp3');
+  //palysong(song, "Frank Sinatra - Let It Snow! Let It Snow! Let It Snow!", "https://www.youtube.com/watch?v=sE3uRRFVsmc&ab_channel=FrankSinatraVEVO");
 
 }
