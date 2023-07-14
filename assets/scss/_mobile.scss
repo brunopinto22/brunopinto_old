@@ -1,0 +1,471 @@
+/*---------------------------------------- Small Screens ----------------------------------------*/
+
+@media (max-width: 600px) {
+
+  $padding: 5vw;
+  $radius: 10px;
+
+  html, body{
+    overflow-x: hidden;
+    .button{
+      border: 3px solid $accent;
+      font-size: 1.4em;
+      padding: 1vh 10vw;
+    }
+    .big{
+      display: none;
+    }
+    .button_extra{
+      padding: 10px 0;
+      span{padding-right: 0;}
+
+      &:hover{
+
+        span{
+          padding-right: 20px;
+        }
+      }
+    }
+
+    .easteregg,.nowplaying{
+      top: 3vh;
+      right: 2vw;
+      width: 90vw;
+      padding: 1vh 3vw;
+      font-size: 0.9em;
+
+      button{
+        padding-right: 5px;
+      }
+
+    }
+
+  }
+
+  header{
+
+    .button{
+      margin-top: 10vh;
+    }
+
+    .sidebar{
+      position: fixed;
+      right: 0;
+      width: 0;
+      height: 100%;
+      z-index: 1000;
+      transition: 0.5s;
+
+      background-image: linear-gradient(180deg, rgba($bg, 0.98) 0%,rgba($bg, 0.85) 50%,rgba($bg, 0.98) 100%),
+      url(../img/backgrounds/sidebarbg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      text-align: right;
+
+      button{
+        font-size: 2em; 
+        margin: 2vh 5vw;
+      }
+
+      a,button{
+        color: $white;
+        background: none;
+        border: none;
+        &:hover{
+          color: $accent;
+          transition: ease-in-out 0.2s;
+        }
+      }
+
+      .container{
+        padding: 0 $padding;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 8vh;
+        height: 60%;
+        margin: 20% 0;
+
+        h1{font-size: 2.5em; font-weight: 500; margin-bottom: 2vh;}
+        a{font-size: 1.5em; font-weight: 300;}
+
+        div{
+          text-align: center;
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+
+        .accounts{
+          text-align: center;
+          display: inline-block;
+          *{
+            padding: 0 1vw;
+            font-size: 1.4em;
+          }
+        }
+      }
+
+    }
+    
+    nav{
+      position: fixed;
+      width: -moz-available;
+      width: -webkit-fill-available;
+      grid-template-columns: 2fr 1fr;
+      padding: 3vh 5vw;
+      background: linear-gradient(180deg, #242424 0%, rgba($bg, 0) 100%); 
+      z-index: 100;
+
+      &::after{
+        margin-top: 8vh;
+        left: 10vw;
+      }
+
+
+      .logo{
+        font-size: 2em;
+      }
+  
+  
+      .links{
+        text-align: right;
+        font-size: 1.5em;
+  
+        a, button{
+          margin: 0 15px;
+          color: $white;
+        }
+        button{
+          background: none;
+          border: none;
+          font-size: 0.8em;
+        }
+  
+        a:hover, button:hover{
+          color: $accent;
+          transition: ease-in-out 0.2s;
+        }
+      }      
+  
+    }
+
+    .banner{
+      display: grid;
+      grid-template-columns: 1fr;
+
+      padding: 13vh $padding 10vh;
+
+      text-align: center;
+
+      h1{
+        font-size: 1.7em;
+        font-weight: 400;
+
+        span{
+          font-weight: 600;
+        }
+
+      }
+
+      .avatar{
+        padding-top: 5vh;
+
+        img{
+          width: 70vw;
+          height: 70vw;
+        }
+
+        &::before{
+          width: 50vw;
+          height: 50vw;
+          top: 38vh;
+        }
+      }
+
+    }
+
+    .banner-404{
+      width: 90%;
+      height: 100vh;
+      margin: 0 5%;
+    }
+    
+    .scroll{
+      font-size: 2em;
+      padding-bottom: 30vh;
+
+      h1{
+        font-size: 0.5em;
+      }
+
+    }
+    
+  }
+
+  .acc{
+    display: none;
+  }
+
+  
+  .container{
+
+    h1{
+      font-size: 5em;
+      line-height: 0.3em; 
+      margin-bottom: 15vh;
+      span{
+        color: $accent;
+        font-size: 0.4em;
+      }
+    }
+    h2{
+      font-size: 2em;
+      font-weight: 500;
+    }
+    h3{
+      font-size: 1.2em;
+      font-weight: 400;
+    }
+    h4{
+      font-size: 1em;
+      font-weight: 300;
+    }
+
+    .skill{
+      padding: 5vh $padding;
+      padding-bottom: 30vh;
+      .cards{
+        grid-template-columns: 1fr;
+        padding: 10vh 0;
+        grid-gap: 10vw;
+
+        .card{
+          padding: 5vh 8vw 15vh;
+          border-radius: 20px;
+          
+          h1{
+            font-size: 3em;
+            font-weight: 500;
+            margin-bottom: 10vh;
+          }
+          h2{
+            font-size: 1.8em;
+            font-weight: 400;
+            margin: 1em 0 0;
+          }
+
+          .pr-border{
+            height: 0.8vh;
+          }
+
+        }
+      }
+    }
+
+    .work{
+      padding: 5vh $padding 20vh;
+      text-align: center;
+
+      h1{
+        span{
+          display: inline-block;
+        }
+      }
+        
+      .cards{
+
+        grid-template-columns: 1fr;
+        grid-gap: 15vw;
+
+        padding: 0 0 6vh;
+
+        text-align: left;
+
+        .card{
+          padding-top: 25vh;
+          border-radius: 16px 16px 20px 20px;
+
+          div{
+            padding: 10vh 5vw 3vh;
+            border-radius: 0px 0px 16px 16px;
+
+            h2{
+              font-size: 5em;
+              font-weight: 700;
+            }
+
+            .label{
+              font-size: 0.8em;
+              font-weight: 700;
+
+              margin: 0 0 1vh;
+              padding: 0.2vh 2.2vw;
+              border-radius: 10px;
+            }
+
+          }
+
+        }
+
+      }
+
+      .button{
+        display: inline-block;
+        width: 55%;
+        i{
+          padding: 0 0 0 2vw;
+        }
+      }
+
+    }
+
+
+    .about{
+      padding: 10vh $padding;
+      text-align: center;
+
+      h1{
+        display: inline-block;
+        font-size: 4.5em;
+      }
+
+      .me{
+        grid-template-columns: 100%;
+
+        .pfp{
+          width: -moz-available;
+          width: -webkit-fill-available;
+          img{
+            width: inherit;
+          }
+        }
+
+      }
+
+      .desc{
+        h2{
+          margin: 6vh 0;
+          text-align: left;
+        }
+        h3{
+          font-size: 1.5em;
+          margin: 0 0 8vh 0;
+          text-align: left;
+        }
+        
+      }
+    }
+
+
+    .contact{
+      padding: 15vh $padding;
+      text-align: center;
+
+      h1{
+        font-size: 3.7em;
+      }
+
+      .form{
+        form{
+          margin-bottom: 5vh;
+          input, textarea{
+            width: -moz-available;
+            border: 2px solid $bg;
+            font-size: 1.2em;
+            margin: 1vh 0;
+  
+            &:focus{
+              border: 2px solid $accent;
+            }
+          }
+          input{height: 3em; padding: 0 5vw;}
+          textarea{height: 30vh; padding: 2vh 5vw;}
+          .button_extra{
+            width: 100%;
+          }
+        }
+        .map{
+          height: 40vh;
+        }
+
+      }
+
+    }
+
+
+  }
+
+
+  footer{
+    grid-template-columns: 1fr;
+    padding: 5vh $padding;
+    text-align: center;
+
+    a{
+      font-size: 1.2em;
+    }
+
+    h1{
+      font-size: 1.7em;
+    }
+
+    .links{
+      grid-template-columns: 1fr;
+      grid-gap: 5vh 0;
+
+      div{
+        *{
+          display: block;
+          line-height: 1.5em;
+        }
+      }
+
+      .accounts{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 2vh;
+        text-align: center;
+        font-size: 2.5vh;
+
+        *{
+          line-height: 1em;
+        }
+      }
+
+    }
+
+    .copyright{
+      border-top: 1px solid rgba($gray,0.3 );
+      margin-top: 5vh;
+      padding-top: 5vh;
+
+      .avatar{
+        
+        h1{
+          font-size: 2em;
+          line-height: 0em;
+        }
+        h2{
+          font-size: 1.5em;
+          line-height: 0em;
+          padding-bottom: 3vh;
+        }
+        h3{
+          font-size: 1em;
+          line-height: 0em;
+          padding-top: 3vh;
+        }
+
+        img{
+          width: 45vw;
+          height: 45vw;
+        }
+
+      }
+
+    }
+
+  }
+
+}
