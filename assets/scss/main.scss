@@ -49,6 +49,8 @@ html, body{
 
     font-weight: 500;
     background: -webkit-linear-gradient(50deg, $accent, #ffa127);
+
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -68,10 +70,12 @@ html, body{
     }
 
     &:hover{
+      cursor: pointer;
       background: -webkit-linear-gradient(100deg, $accent, $white);
+
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      cursor: pointer;
     }
 
   }

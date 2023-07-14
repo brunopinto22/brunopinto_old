@@ -744,6 +744,7 @@ html .link, body .link {
   vertical-align: bottom;
   font-weight: 500;
   background: -webkit-linear-gradient(50deg, #fed259, #ffa127);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.2s ease-in-out;
@@ -761,10 +762,11 @@ html .link::before, body .link::before {
   transition: transform 0.25s ease-out;
 }
 html .link:hover, body .link:hover {
+  cursor: pointer;
   background: -webkit-linear-gradient(100deg, #fed259, #e1e1e1);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  cursor: pointer;
 }
 html .button_extra, body .button_extra {
   display: block;
