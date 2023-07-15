@@ -2,8 +2,8 @@ const date = new Date();
 console.log(date);
 let day = date.getDate(); let month = date.getMonth() + 1;
 
-var audio = new Audio('assets\\easteregg.mp3');
-var audio2 = new Audio('assets\\easteregg_mega.mp3');
+var audio = new Audio('assets\\audio\\easteregg.mp3');
+var audio2 = new Audio('assets\\audio\\easteregg_mega.mp3');
 let achivements = 0;
 let count = 0;
 let i = 0; let x = 0; let y = 0; let z = 0;
@@ -204,7 +204,7 @@ const XMAS = () =>{
   document.getElementById("avatar").src = "assets\\img\\avatars\\avatar_xmas.png";
   document.getElementById("footer_avatar").src = "assets\\img\\avatars\\avatar3_xmas.png";
 
-  var song = new Audio('assets\\let-it-snow-let-it-snow-let-it-snow-official-music-video.mp3');
+  var song = new Audio('assets\\audio\\let-it-snow-let-it-snow-let-it-snow-official-music-video.mp3');
   palysong(song, "Frank Sinatra - Let It Snow! Let It Snow! Let It Snow!", "https://www.youtube.com/watch?v=sE3uRRFVsmc&ab_channel=FrankSinatraVEVO");
 
   setInterval(createSnowFlake, 50);
