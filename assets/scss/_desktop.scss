@@ -347,69 +347,44 @@
 
 
   footer{
-    grid-template-columns: 60% 40%;
-    padding: 5vh $padding;
+    margin: 40vh 0 0;
+    padding: 15vh 10vw 0;
 
-    a{
-      font-size: 1.2em;
-    }
+    .background{
+      .colors{
+        right: 3vw;
+        bottom: 3vw;
 
-    h1{
-      font-size: 1.7em;
+        div{
+          width: 1.5vw;
+          height: 1.5vw;
+          &:nth-child(2){
+            margin: 1.5vh 0;
+          }
+        }
+      }
     }
 
     .links{
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
-      div{
-        *{
-          display: table;
-          line-height: 1.5em;
-        }
+      h1{
+        font-size: 1.8em;
+        margin: 0 0 3vh 0;
       }
 
-      .accounts{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 2vh;
-        width: 40%;
-        text-align: center;
-        font-size: 2.5vh;
-
-        *{
-          display: inline-block;
-          line-height: 1em;
-        }
+      a, p{
+        margin: 1vh 0;
+        font-size: 1.2em;
+        font-weight: 300;
+        letter-spacing: 1px;
       }
 
     }
 
     .copyright{
-      border-left: 1px solid rgba($gray,0.3 );
-
-      .avatar{
-        
-        h1{
-          font-size: 2em;
-          line-height: 0em;
-        }
-        h2{
-          font-size: 1.5em;
-          line-height: 0em;
-          padding-bottom: 3vh;
-        }
-        h3{
-          font-size: 1em;
-          line-height: 0em;
-          padding-top: 3vh;
-        }
-
-        img{
-          width: 15vw;
-          height: 15vw;
-        }
-      }
-
+      padding: 15vh 0 2vh;
+      font-size: 1.2em;
     }
 
   }
