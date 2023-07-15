@@ -366,10 +366,11 @@
   header .sidebar {
     position: fixed;
     right: 0;
-    width: 0;
+    width: 100%;
     height: 100%;
     z-index: 1000;
     transition: 0.5s;
+    transform: translateX(100%);
     background-image: linear-gradient(180deg, rgba(58, 58, 58, 0.98) 0%, rgba(58, 58, 58, 0.85) 50%, rgba(58, 58, 58, 0.98) 100%), url(../img/backgrounds/sidebarbg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -425,7 +426,7 @@
     width: -webkit-fill-available;
     grid-template-columns: 2fr 1fr;
     padding: 3vh 5vw;
-    background: linear-gradient(180deg, #242424 0%, rgba(58, 58, 58, 0) 100%);
+    background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%);
     z-index: 100;
   }
   header nav::after {

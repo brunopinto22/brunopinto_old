@@ -27,7 +27,7 @@
       }
     }
 
-    .easteregg,.nowplaying{
+    .easteregg,.nowplaying,.notification{
       top: 3vh;
       right: 2vw;
       width: 90vw;
@@ -51,10 +51,12 @@
     .sidebar{
       position: fixed;
       right: 0;
-      width: 0;
+      width: 100%;
       height: 100%;
       z-index: 1000;
       transition: 0.5s;
+      
+      transform: translateX(100%);
 
       background-image: linear-gradient(180deg, rgba($bg, 0.98) 0%,rgba($bg, 0.85) 50%,rgba($bg, 0.98) 100%),
       url(../img/backgrounds/sidebarbg.jpg);
@@ -114,7 +116,7 @@
       width: -webkit-fill-available;
       grid-template-columns: 2fr 1fr;
       padding: 3vh 5vw;
-      background: linear-gradient(180deg, #242424 0%, rgba($bg, 0) 100%); 
+      background: linear-gradient(180deg, #242424 0%, #24242400 100%); 
       z-index: 100;
 
       &::after{
@@ -234,23 +236,23 @@
 
     .skill{
       padding: 5vh $padding;
-      padding-bottom: 30vh;
+      padding-bottom: 20vh;
       .cards{
         grid-template-columns: 1fr;
         padding: 10vh 0;
         grid-gap: 10vw;
 
         .card{
-          padding: 5vh 8vw 15vh;
+          padding: 5vh 8vw 10vh;
           border-radius: 20px;
           
           h1{
-            font-size: 3em;
+            font-size: 1.5em;
             font-weight: 500;
-            margin-bottom: 10vh;
+            margin-bottom: 5vh;
           }
           h2{
-            font-size: 1.8em;
+            font-size: 1.2em;
             font-weight: 400;
             margin: 1em 0 0;
           }
@@ -283,7 +285,7 @@
         text-align: left;
 
         .card{
-          padding-top: 25vh;
+          padding-top: 20vh;
           border-radius: 16px 16px 20px 20px;
 
           div{
@@ -370,7 +372,7 @@
         form{
           margin-bottom: 5vh;
           input, textarea{
-            width: -moz-available;
+            width: -webkit-fill-available;
             border: 2px solid $bg;
             font-size: 1.2em;
             margin: 1vh 0;
@@ -398,73 +400,41 @@
 
 
   footer{
-    grid-template-columns: 1fr;
-    padding: 5vh $padding;
-    text-align: center;
+    margin: 20vh 0 0;
+    padding: 5vh 8vw 0;
 
-    a{
-      font-size: 1.2em;
-    }
-
-    h1{
-      font-size: 1.7em;
+    .background{
+      .colors{
+        display: none;
+      }
     }
 
     .links{
-      grid-template-columns: 1fr;
-      grid-gap: 5vh 0;
+      grid-template-columns: 1fr 1fr;
 
-      div{
-        *{
-          display: block;
-          line-height: 1.5em;
-        }
+      h1{
+        font-size: 1.6em;
+        margin: 5vh 0 3vh;
       }
 
-      .accounts{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-gap: 2vh;
-        text-align: center;
-        font-size: 2.5vh;
+      a, p{
+        margin: 1vh 0;
+        font-size: 1.2em;
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
 
-        *{
-          line-height: 1em;
-        }
+      div:nth-child(5){
+        display: none;
       }
 
     }
 
     .copyright{
-      border-top: 1px solid rgba($gray,0.3 );
-      margin-top: 5vh;
-      padding-top: 5vh;
-
-      .avatar{
-        
-        h1{
-          font-size: 2em;
-          line-height: 0em;
-        }
-        h2{
-          font-size: 1.5em;
-          line-height: 0em;
-          padding-bottom: 3vh;
-        }
-        h3{
-          font-size: 1em;
-          line-height: 0em;
-          padding-top: 3vh;
-        }
-
-        img{
-          width: 45vw;
-          height: 45vw;
-        }
-
-      }
-
+      padding: 8vh 0 2vh;
+      font-size: 1.2em;
     }
+
 
   }
 
