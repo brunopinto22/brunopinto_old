@@ -11,10 +11,10 @@ let i = 0; let x = 0; let y = 0; let z = 0;
 
 /*---------------------------------------- SIDEBAR ----------------------------------------*/
 function opensidebar(){
-  document.getElementById("sidebar").style.width = "100%";
+  document.getElementById("sidebar").style.transform = "translateX(0%)";
 }
 function closesidebar(){
-  document.getElementById("sidebar").style.width = "0";
+  document.getElementById("sidebar").style.transform = "translateX(100%)";
 }
 
 
