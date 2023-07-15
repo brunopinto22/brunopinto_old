@@ -18,6 +18,53 @@ function closesidebar(){
 }
 
 
+/*----------------------------------------- COLORS -----------------------------------------*/
+const colors = document.querySelectorAll('.color');
+
+colors.forEach(element => {
+  element.addEventListener('click', copyToClipboard);
+});
+
+function copyToClipboard() {
+  const computedStyle = window.getComputedStyle(this);
+  const rgbColor = computedStyle.getPropertyValue('background-color');
+
+  // Convert RGB color to hex format
+  const hexColor = rgbToHex(rgbColor);
+
+  var tempInput = document.createElement("input");
+  tempInput.value = hexColor;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+
+  setTimeout("callNotification()", 500);
+  setTimeout("closeNotification()", 4000);
+
+}
+
+function callNotification(){
+  audio.play();
+  document.getElementById("notification").style.transform = "translate(0,1vh)";
+}
+function closeNotification(){document.getElementById("notification").style.transform = "translate(0,-15vh)";}
+
+// Function to convert RGB color to hex format
+function rgbToHex(rgbColor) {
+  // Extract RGB values from the string
+  const match = rgbColor.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+  if (!match) {
+    return rgbColor;
+  }
+
+  // Convert the RGB values to hex format
+  const hexColor = "#" + ((1 << 24) | (parseInt(match[1]) << 16) | (parseInt(match[2]) << 8) | parseInt(match[3])).toString(16).slice(1);
+
+  return hexColor;
+}
+
+
 /*----------------------------------------- TYPING -----------------------------------------*/
 var typed = new Typed('#typing', {
   strings: ['web developer^1000', 'software engineer^1000', 'web designer^1000'],
