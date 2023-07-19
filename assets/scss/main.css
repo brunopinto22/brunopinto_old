@@ -968,12 +968,12 @@ html .container .skill h4 a, body .container .skill h4 a {
   cursor: pointer;
   text-decoration: underline;
 }
-html .container .skill a, body .container .skill a {
+html .container .skill a, html .container .skill span, body .container .skill a, body .container .skill span {
   color: inherit;
   cursor: default;
   transition: all ease-in-out 0.15s;
 }
-html .container .skill a:hover, body .container .skill a:hover {
+html .container .skill a:hover, html .container .skill span:hover, body .container .skill a:hover, body .container .skill span:hover {
   color: #fed259;
 }
 html .container .skill .link, body .container .skill .link {
@@ -998,6 +998,14 @@ html .container .skill .cards .card .pr-border, body .container .skill .cards .c
 html .container .skill .cards .card .pr, body .container .skill .cards .card .pr {
   background-color: #fed259;
   height: 100%;
+}
+html .container .skill .cards .card #blender, body .container .skill .cards .card #blender {
+  color: inherit;
+  cursor: default;
+  transition: all ease-in-out 0.15s;
+}
+html .container .skill .cards .card #blender:hover, body .container .skill .cards .card #blender:hover {
+  color: #fed259;
 }
 html .container .work, body .container .work {
   background-image: linear-gradient(180deg, #3a3a3a 0%, rgba(58, 58, 58, 0.9) 50%, #3a3a3a 100%), url(../img/backgrounds/workbg.jpg);

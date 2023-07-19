@@ -112,10 +112,12 @@ document.getElementById("avatar").addEventListener("click",function addCount(){
 document.getElementById("game").addEventListener("click",function gameopened(){
     if(y == 0){
       achivements++;
+      window.open('assets/Game_Website/index.html', '_blank');
       setTimeout("calleaster()", 500);
       setTimeout("closeeaster()", 4000);
       y++;
-    }
+    } else
+      window.open('assets/Game_Website/index.html', '_blank');
 });
 
 document.getElementById("pfp").addEventListener("click",function pfpclicked(){
