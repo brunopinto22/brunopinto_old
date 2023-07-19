@@ -3,6 +3,8 @@
 @import 'desktop';
 @import 'mobile';
 
+@import 'animation';
+
 
 /*---------------------------------------- DEFAULT ----------------------------------------*/
 html, body{
@@ -283,6 +285,14 @@ html, body{
           -moz-animation: bounce 2s infinite;
           -webkit-animation: bounce 2s infinite;
           animation: bounce 2s infinite;
+        }
+
+        &:hover{
+          i{
+            -moz-animation: bounce-hover 1s infinite;
+            -webkit-animation: bounce-hover 1s infinite;
+            animation: bounce-hover 1s infinite;
+          }
         }
       }
     }

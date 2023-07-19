@@ -24,17 +24,7 @@
 .gray {
   color: #bfbfbf;
 }
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(-15px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  0% {
-    transform: translateY(-15px);
-  }
-}
+
 /*---------------------------------------- Big Screens ----------------------------------------*/
 @media (min-width: 600px) {
   html .button, body .button {
@@ -667,6 +657,28 @@
     font-size: 1.2em;
   }
 }
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  0% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce-hover {
+  100% {
+    transform: translateY(-15px) rotate(360deg);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  0% {
+    transform: translateY(-15px) rotate(0);
+  }
+}
 /*---------------------------------------- DEFAULT ----------------------------------------*/
 html, body {
   overflow-x: hidden;
@@ -896,6 +908,9 @@ html header .scroll a h1, body header .scroll a h1 {
 }
 html header .scroll a i, body header .scroll a i {
   animation: bounce 2s infinite;
+}
+html header .scroll a:hover i, body header .scroll a:hover i {
+  animation: bounce-hover 1s infinite;
 }
 html .avatar, body .avatar {
   display: grid;
