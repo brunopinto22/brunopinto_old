@@ -4,6 +4,9 @@ let day = date.getDate(); let month = date.getMonth() + 1;
 
 var audio = new Audio('assets\\audio\\easteregg.mp3');
 var audio2 = new Audio('assets\\audio\\easteregg_mega.mp3');
+
+var avatar = "assets\\img\\avatars\\avatar.png";
+
 let achivements = 0;
 let count = 0;
 let i = 0; let x = 0; let y = 0; let z = 0;
@@ -101,11 +104,8 @@ document.getElementById("avatar").addEventListener("click",function addCount(){
     achivements++;
     setTimeout("calleaster()", 500);
     setTimeout("closeeaster()", 4000);
-  } else if(count == 22)
-    if(day >= 20 && month == 12)
-      document.getElementById("avatar").src = "assets\\img\\avatars\\avatar_xmas.png";
-    else
-      document.getElementById("avatar").src = "assets\\img\\avatars\\avatar.png";
+  } else
+      document.getElementById("avatar").src = avatar;
       
 });
 
@@ -122,17 +122,23 @@ document.getElementById("game").addEventListener("click",function gameopened(){
 
 document.getElementById("pfp").addEventListener("click",function pfpclicked(){
   if(i == 0){
-    achivements++; i++;
+    achivements++;
     document.getElementById("pfp").src = "assets\\img\\pfp2.png";
     setTimeout("calleaster()", 500);
     setTimeout("closeeaster()", 4000);
-  } else if(i % 2 != 0){document.getElementById("pfp").src = "assets\\img\\pfp.png"; i++;
-  } else {document.getElementById("pfp").src = "assets\\img\\pfp2.png"; i++;}
+    i++;
+  } else if(i % 2 != 0){
+    document.getElementById("pfp").src = "assets\\img\\pfp.png";
+    i++;
+  } else {
+    document.getElementById("pfp").src = "assets\\img\\pfp2.png";
+    i++;
+  }
 });
 
 document.getElementById("blender").addEventListener("click",function blender(){
   if(x == 0){
-    achivements++; i++;
+    achivements++; x++;
     window.open('https://youtu.be/3w5aJzEuHIk', '_blank');
     setTimeout("calleaster()", 500);
     setTimeout("closeeaster()", 4000);
@@ -250,7 +256,8 @@ const XMAS = () =>{
   link.media = "screen,print";
   document.getElementsByTagName( "head" )[0].appendChild( link );
 
-  document.getElementById("avatar").src = "assets\\img\\avatars\\avatar_xmas.png";
+  avatar = "assets\\img\\avatars\\avatar_xmas.png"
+  document.getElementById("avatar").src = avatar;
 
   var song = new Audio('assets\\audio\\let-it-snow-let-it-snow-let-it-snow-official-music-video.mp3');
   palysong(song, "Frank Sinatra - Let It Snow! Let It Snow! Let It Snow!", "https://www.youtube.com/watch?v=sE3uRRFVsmc&ab_channel=FrankSinatraVEVO");
@@ -278,7 +285,8 @@ const XMAS = () =>{
 
 const HALLOWEEN = () =>{
   
-  document.getElementById("avatar").src = "assets\\img\\avatars\\avatar_hlw.png";
+  avatar = "assets\\img\\avatars\\avatar_hlw.png";
+  document.getElementById("avatar").src = avatar;
   //var song = new Audio('assets\\let-it-snow-let-it-snow-let-it-snow-official-music-video.mp3');
   //palysong(song, "Frank Sinatra - Let It Snow! Let It Snow! Let It Snow!", "https://www.youtube.com/watch?v=sE3uRRFVsmc&ab_channel=FrankSinatraVEVO");
 
