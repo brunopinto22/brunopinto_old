@@ -249,7 +249,6 @@ const XMAS = () =>{
   document.getElementsByTagName( "head" )[0].appendChild( link );
 
   document.getElementById("avatar").src = "assets\\img\\avatars\\avatar_xmas.png";
-  document.getElementById("footer_avatar").src = "assets\\img\\avatars\\avatar3_xmas.png";
 
   var song = new Audio('assets\\audio\\let-it-snow-let-it-snow-let-it-snow-official-music-video.mp3');
   palysong(song, "Frank Sinatra - Let It Snow! Let It Snow! Let It Snow!", "https://www.youtube.com/watch?v=sE3uRRFVsmc&ab_channel=FrankSinatraVEVO");
@@ -278,7 +277,6 @@ const XMAS = () =>{
 const HALLOWEEN = () =>{
   
   document.getElementById("avatar").src = "assets\\img\\avatars\\avatar_hlw.png";
-  document.getElementById("footer_avatar").src = "assets\\img\\avatars\\avatar3_hlw.png";
   //var song = new Audio('assets\\let-it-snow-let-it-snow-let-it-snow-official-music-video.mp3');
   //palysong(song, "Frank Sinatra - Let It Snow! Let It Snow! Let It Snow!", "https://www.youtube.com/watch?v=sE3uRRFVsmc&ab_channel=FrankSinatraVEVO");
 
