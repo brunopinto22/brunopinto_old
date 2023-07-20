@@ -679,6 +679,29 @@
     transform: translateY(-15px) rotate(0);
   }
 }
+.pr-animation {
+  animation: progress 1s ease-out 1;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+}
+.fade-in {
+  animation: fade-in 1.5s ease-in-out;
+}
+
+@keyframes fade-in {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(-5vh);
+    opacity: 0;
+  }
+}
 /*---------------------------------------- DEFAULT ----------------------------------------*/
 html, body {
   overflow-x: hidden;
@@ -713,7 +736,7 @@ html .link, body .link {
   overflow: hidden;
   vertical-align: bottom;
   font-weight: 500;
-  background: -webkit-linear-gradient(50deg, #fed259, #ffa127);
+  background: linear-gradient(50deg, #fed259, #d8a847);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -996,7 +1019,7 @@ html .container .skill .cards .card .pr-border, body .container .skill .cards .c
   background-color: #3a3a3a;
 }
 html .container .skill .cards .card .pr, body .container .skill .cards .card .pr {
-  background-color: #fed259;
+  background: linear-gradient(90deg, #d8a847 0%, #fed259 50%, #fee08b 100%);
   height: 100%;
 }
 html .container .work, body .container .work {

@@ -78,6 +78,40 @@ var typed = new Typed('#typing', {
 });
 
 
+/*------------------------------------ ENTRY ANIMATIONS ------------------------------------*/
+const prObs = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+    if (entry.isIntersecting) {
+      // Add the animation class
+      entry.target.classList.add('pr-animation');
+      // Unobserve the element to avoid triggering the animation multiple times
+      prObs.unobserve(entry.target);
+    }
+  });
+});
+
+// Observe all elements with the class 'pr'
+document.querySelectorAll('.pr').forEach(prElement => {
+  prObs.observe(prElement);
+});
+
+const workObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+        workObs.unobserve(entry.target);
+      }
+    });
+  });
+
+  document.querySelectorAll('.work-card').forEach(boxElement => {
+    workObs.observe(boxElement);
+  });
+
+
+
 /*---------------------------------------- EASTEREGGS ----------------------------------------*/
 function calleaster(){
   console.log(achivements);
