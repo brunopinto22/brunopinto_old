@@ -380,7 +380,7 @@ html, body{
           text-decoration: underline;
         }
       }
-      a, span{
+      a, #game, #blender{
         color: inherit;
         cursor: default;
         transition: all ease-in-out 0.15s;
@@ -412,15 +412,6 @@ html, body{
           .pr{
             background-color: $accent;
             height: 100%;
-          }
-
-          #blender{
-            color: inherit;
-            cursor: default;
-            transition: all ease-in-out 0.15s;
-            &:hover{
-              color: $accent;
-            }
           }
         }
 
