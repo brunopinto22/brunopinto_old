@@ -182,7 +182,7 @@
     text-align: center;
   }
   .container .work h1 {
-    text-align: center;
+    text-align: left;
   }
   .container .work *:nth-child(even) {
     position: relative;
