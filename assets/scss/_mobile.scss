@@ -45,7 +45,7 @@
   header{
 
     .button{
-      margin-top: 10vh;
+      margin-top: 8vh;
     }
 
     .sidebar{
@@ -116,7 +116,7 @@
       width: -webkit-fill-available;
       grid-template-columns: 2fr 1fr;
       padding: 3vh 5vw;
-      background: linear-gradient(180deg, #242424 0%, #24242400 100%); 
+      background: linear-gradient(180deg, #111111c0 0%, #11111100 100%); 
       z-index: 100;
 
       &::after{
@@ -156,7 +156,7 @@
       display: grid;
       grid-template-columns: 1fr;
 
-      padding: 13vh $padding 10vh;
+      padding: 13vh $padding 8vh;
 
       text-align: center;
 
@@ -236,7 +236,7 @@
 
     .skill{
       padding: 5vh $padding;
-      padding-bottom: 20vh;
+      padding-bottom: 10vh;
       .cards{
         grid-template-columns: 1fr;
         padding: 10vh 0;
@@ -266,7 +266,7 @@
     }
 
     .work{
-      padding: 5vh $padding 20vh;
+      padding: 50vh $padding;
       text-align: center;
 
       h1{
@@ -324,7 +324,7 @@
 
 
     .about{
-      padding: 10vh $padding;
+      padding: 20vh $padding;
       text-align: center;
 
       h1{
@@ -361,11 +361,12 @@
 
 
     .contact{
-      padding: 15vh $padding;
+      padding: 50vh $padding 30vh;
       text-align: center;
 
       h1{
         font-size: 3.7em;
+        margin-bottom: 5vh;
       }
 
       .form{
@@ -388,7 +389,8 @@
           }
         }
         .map{
-          height: 40vh;
+          height: 50vh;
+          margin-top: 5vh;
         }
 
       }
@@ -400,7 +402,7 @@
 
 
   footer{
-    margin: 20vh 0 0;
+    margin: 15vh 0 0;
     padding: 5vh 8vw 0;
 
     .background{

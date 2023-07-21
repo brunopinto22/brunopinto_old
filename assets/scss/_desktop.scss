@@ -181,7 +181,7 @@
 
     .skill{
       padding: 30vh $padding;
-      padding-bottom: 40vh;
+
       .cards{
         grid-template-columns: 1fr 1fr 1fr;
         padding: 15vh 10vw;
@@ -199,7 +199,7 @@
           h2{
             font-size: 1.3em;
             font-weight: 400;
-            margin: 1em 0 0;
+            margin: 1em 0 0.4em;
           }
 
           .pr-border{
@@ -211,7 +211,7 @@
     }
 
     .work{
-      padding: 30vh $padding;
+      padding: 50vh $padding;
 
       text-align: center;
 
@@ -274,7 +274,7 @@
 
 
     .about{
-      padding: 30vh $padding;
+      padding: 50vh $padding;
 
       .me{
         grid-template-columns: 1fr 1fr;
@@ -305,7 +305,9 @@
 
 
     .contact{
-      padding: 30vh $padding;
+      padding: 40vh $padding 50vh;
+
+      h1{ margin-bottom: 8vh; }
 
       .form{
         display: grid;
@@ -347,7 +349,7 @@
 
 
   footer{
-    margin: 40vh 0 0;
+    margin: 50vh 0 0;
     padding: 15vh 10vw 0;
 
     .background{
