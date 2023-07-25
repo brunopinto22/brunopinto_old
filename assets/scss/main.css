@@ -80,6 +80,9 @@
   header .banner h1 span {
     font-weight: 600;
   }
+  header .banner .button {
+    padding: 1vh 4vw;
+  }
   header .banner .avatar img {
     width: 35vw;
     height: 35vw;
