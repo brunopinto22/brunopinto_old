@@ -507,7 +507,7 @@ html, body{
       .form{
         form{
           input, textarea{
-            font-family: 'Source Code Pro', monospace;
+            font-family: $secundary-font;
             resize: none;
             border-radius: 15px;
             background: $bg;
@@ -520,7 +520,7 @@ html, body{
             }
   
             &::placeholder{
-              font-family: 'Source Code Pro', monospace;
+              font-family: $secundary-font;
               color: $gray;
               font-style: italic;
             }
@@ -602,13 +602,8 @@ html, body{
           color: $white;
         }
 
-        h1{
-          font-family: 'Bitter', serif;
-        }
-
         a, p{
           display: table;
-          font-family: 'Roboto', sans-serif;
         }
 
         a{
@@ -628,7 +623,6 @@ html, body{
 
     .copyright{
       z-index: 2;
-      font-family: 'Source Code Pro', monospace;
       text-align: center;
     }
 

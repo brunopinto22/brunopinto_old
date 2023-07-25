@@ -1180,12 +1180,8 @@ html footer .links, body footer .links {
 html footer .links div *, body footer .links div * {
   color: #e1e1e1;
 }
-html footer .links div h1, body footer .links div h1 {
-  font-family: "Bitter", serif;
-}
 html footer .links div a, html footer .links div p, body footer .links div a, body footer .links div p {
   display: table;
-  font-family: "Roboto", sans-serif;
 }
 html footer .links div a, body footer .links div a {
   cursor: pointer;
@@ -1197,6 +1193,5 @@ html footer .links div a:hover, body footer .links div a:hover {
 }
 html footer .copyright, body footer .copyright {
   z-index: 2;
-  font-family: "Source Code Pro", monospace;
   text-align: center;
 }/*# sourceMappingURL=main.css.map */
