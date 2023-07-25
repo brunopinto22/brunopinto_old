@@ -3,51 +3,51 @@
 
 <head>
   <title>Bruno Pinto</title>
-  <link rel="icon" type="image/x-icon" href="assets/img/avatars/avatar.png">
+  <link rel="icon" type="image/x-icon" href="./src/assets/img/avatars/avatar.png">
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="assets/scss/main.css" id="style">
-  <link href="assets/fontawesome/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="./src/assets/scss/main.css" id="style">
+  <link href="./src/assets/fontawesome/css/all.css" rel="stylesheet">
   
 </head>
 
-<body class="main-font" onload="verifyEvents()">
+<body class="main-font">
 
     
-  <section style="background-image: url('./assets/img/backgrounds/mainbg.jpg');">
+  <section style="background-image: url('./src/assets/img/backgrounds/mainbg.jpg');">
     <header>
       <div class="sidebar small" id="sidebar">
-        <button class="title-font" onclick="closesidebar()"><i class="fa-solid fa-xmark"></i></button>
+        <button class="title-font close"><i class="fa-solid fa-xmark"></i></button>
         <div class="container">
           <div class="links">
             <h1 class="title-font">Links</h1>
-            <a onclick="closesidebar()" href="#nav">Home</a>
-            <a onclick="closesidebar()" href="#skill">Skills</a>
-            <a onclick="closesidebar()" href="#work">Work</a>
-            <a onclick="closesidebar()" href="#about">About</a>
+            <a class="close" href="#banner">Home</a>
+            <a class="close" href="#skill">Skills</a>
+            <a class="close" href="#work">Work</a>
+            <a class="close" href="#about">About</a>
           </div>
           <div class="extras">
             <h1 class="title-font">Extras</h1>
-            <a onclick="closesidebar()" href="https://www.isec.pt/" target="_blank">ISEC</a>
-            <a onclick="closesidebar()" href="https://www.esmcastilho.pt/" target="_blank">ESMC</a>
-            <a onclick="closesidebar()" href="https://www.critec.pt/inicio" target="_blank">Critec</a>
+            <a class="close" href="https://www.isec.pt/" target="_blank">ISEC</a>
+            <a class="close" href="https://www.esmcastilho.pt/" target="_blank">ESMC</a>
+            <a class="close" href="https://www.critec.pt/inicio" target="_blank">Critec</a>
           </div>
           <div class="accounts">
             <h1 class="title-font">Accounts</h1>
-            <a onclick="closesidebar()" href="https://open.spotify.com/user/2rlflj131gg9ytptxvcmfg00b?si=d13ba05a93934eb6" target="_blank"><i class="fa-brands fa-spotify"></i></a>
-            <a onclick="closesidebar()" href="https://discord.com/users/561281835561123870" target="_blank"><i class="fa-brands fa-discord"></i></a>
-            <a onclick="closesidebar()" href="https://github.com/brunopinto22" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a onclick="closesidebar()" href="https://www.linkedin.com/in/bruno-pinto-58b94b234/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a onclick="closesidebar()" href="https://www.instagram.com/bruno.pinto.20/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a class="close" href="https://open.spotify.com/user/2rlflj131gg9ytptxvcmfg00b?si=d13ba05a93934eb6" target="_blank"><i class="fa-brands fa-spotify"></i></a>
+            <a class="close" href="https://discord.com/users/561281835561123870" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            <a class="close" href="https://github.com/brunopinto22" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a class="close" href="https://www.linkedin.com/in/bruno-pinto-58b94b234/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="close" href="https://www.instagram.com/bruno.pinto.20/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
       </div>
     
+
       <div class="easteregg" id="easter">
-        <button class="title-font" onclick="closeeaster()" ><i class="fa-solid fa-xmark"></i></button>
         <h1 id="eastertext">Nice! You found <span id="score"></span> of 5! Keep exploring ;)</h1>
         <h1 id="congrats" style="display: none;">Congrats!! You found all the easter eggs!</h1>
       </div>
@@ -57,22 +57,26 @@
       <div class="notification" id="notification">
         <h1>Color hex code was copied to the Clipboard</h1>
       </div>
-      <nav id="nav">
+
+
+      <nav>
         <div class="logo title-font"><a href="">Bruno Pinto</a></div>
         <div class="links">
           <a href="#skill" class="big" >Skills</a>
           <a href="#work" class="big">Work</a>
           <a href="#about" class="big">About</a>
-          <button onclick="opensidebar()" class="small"><i class="fa-solid fa-bars"></i></button>
+          <button id="open" class="small"><i class="fa-solid fa-bars"></i></button>
         </div>
       </nav>
-      <div class="banner">
+
+
+      <div class="banner" id="banner">
         <div>
           <h1>Hi, I'm <span class="title-font accent">Bruno Pinto</span><br>And I'm a <br class="small"><span id="typing" class="title-font gray"></span></h1>
           <a href="#contact" class="button big">Want to talk to me?</a>
         </div>
         <div class="avatar center">
-          <img src="assets/img/avatars/avatar.png" title="The 3D model wasnt made by me." alt="avatar" id="avatar">
+          <img src="./src/assets/img/avatars/avatar.png" title="The 3D model wasnt made by me." alt="avatar" id="avatar">
         </div>
         <a href="#contact" class="button small">Want to talk to me?</a>
       </div>
@@ -111,11 +115,11 @@
         <div class="card">
           <h1>Coding</h1>
           <h2>C</h2>
-          <div class="pr-border"><div class="pr" style="width: 80%;"></div></div>
+          <div class="pr-border"><div class="pr" style="width: 95%;"></div></div>
           <h2>C++</h2>
           <div class="pr-border"><div class="pr" style="width: 62%;"></div></div>
           <h2>Java</h2>
-          <div class="pr-border"><div class="pr" style="width: 44%;"></div></div>
+          <div class="pr-border"><div class="pr" style="width: 34%;"></div></div>
         </div>
 
         <div class="card">
@@ -123,9 +127,9 @@
           <h2>HTML</h2>
           <div class="pr-border"><div class="pr" style="width: 90%;"></div></div>
           <h2>CSS / SCASS</h2>
-          <div class="pr-border"><div class="pr" style="width: 85%;"></div></div>
+          <div class="pr-border"><div class="pr" style="width: 95%;"></div></div>
           <h2>Javascript</h2>
-          <div class="pr-border"><div class="pr" style="width: 75%;"></div></div>
+          <div class="pr-border"><div class="pr" style="width: 65%;"></div></div>
         </div>
 
         <div class="card">
@@ -141,52 +145,12 @@
       </div>
     </div>
 
-    <section style="background-image: url('./assets/img/backgrounds/workbg.jpg');">
+    <section style="background-image: url('./src/assets/img/backgrounds/workbg.jpg');">
       <div class="work" id="work">
         <h1 class="title-font">WORK<span class="secundary-font">&projects</span></h1>
       
-        <div class="cards">
-          <a class="work-card" href="404.html" target="">
-            <div class="card" style="background-image: url(assets/img/projects/Mianis.png);">
-              <div>
-                <h2 class="main-font">Miani's</h2>
-                <h3 class="label">final project</h3>
-                <h3 class="label blue">website</h3>
-                <h3 class="label light-blue">design</h3>
-                <br>
-                <h3 class="label label-light red-light">HTML</h3>
-                <h3 class="label label-light blue-light">CSS</h3>
-                <h3 class="label label-light">Javascript</h3>
-                <h3 class="label label-light purple-light">Bootstrap</h3>
-              </div>
-            </div>
-          </a>
-          <a class="work-card" href="https://github.com/brunopinto22/SOBay" target="_blank">
-            <div class="card" style="background-image: url(assets/img/projects/SOBay.png);">
-              <div>
-                <h2 class="main-font">SOBay</h2>
-                <h3 class="label red">university</h3>
-                <h3 class="label green">terminal</h3>
-                <br>
-                <h3 class="label label-light blue-light">C</h3>
-                <h3 class="label label-light green-light">Linux</h3>
-              </div>
-            </div>
-          </a>
-          <a class="work-card" href="https://brunopinto22.github.io/REMAX-Website/" target="_blank">
-            <div class="card" style="background-image: url(assets/img/projects/REMAX.png);">
-              <div>
-                <h2 class="main-font">REMAX copy</h2>
-                <h3 class="label red">university</h3>
-                <h3 class="label blue">website</h3>
-                <br>
-                <h3 class="label label-light red-light">HTML</h3>
-                <h3 class="label label-light blue-light">CSS</h3>
-                <h3 class="label label-light">Javascript</h3>
-              </div>
-            </div>
-          </a>
-        </div>
+        <div class="cards" id="work-container"></div>
+
         <a href="https://github.com/brunopinto22?tab=overview" target="_blank" class="button">More<i class="fa-brands fa-github"></i></a>
       </div>
     </section>
@@ -196,7 +160,7 @@
 
       <div class="me">
         <div class="pfp">
-          <img id="pfp" src="assets/img/pfp.png">
+          <img id="pfp" src="./src/assets/img/pfp.png">
         </div>
 
         <div class="desc">
@@ -219,7 +183,7 @@
       </div>
     </div>
     
-    <section style="background-image: url(./assets/img/backgrounds/contactbg.jpg);">
+    <section style="background-image: url(./src/assets/img/backgrounds/contactbg.jpg);">
       <div class="contact" id="contact">
         <h1 class="title-font">Contact<span class="secundary-font">&location</span></h1>
         <div class="form">
@@ -252,7 +216,7 @@
 
       <div>
         <h1 class="title-font">Links</h1>
-        <a href="#nav">Home</a>
+        <a href="#banner">Home</a>
         <a href="#skill">Skills</a>
         <a href="#work">Work</a>
         <a href="#about">About me</a>
@@ -294,7 +258,9 @@
   </footer>
 
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-  <script src="js.js"></script>
+  <script src="./src/js/index.js" type="module"></script>
+  <script src="./src/js/form.js"></script>
+  <script src="./src/js/works.js"></script>
 
 </body>
 
