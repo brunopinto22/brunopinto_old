@@ -1,0 +1,51 @@
+[
+  {
+    "link": "",
+    "nome": "Miani's",
+    "img": "Mianis.png",
+    "maintag": [
+      { "name": "final project", "color": "default" },
+      { "name": "website", "color": "blue" },
+      { "name": "design", "color": "light-blue" }
+    ],
+    "sctag": [
+      { "name": "HTML", "color": "red" },
+      { "name": "CSS", "color": "blue" },
+      { "name": "Javascript", "color": "default" },
+      { "name": "Bootstrap", "color": "purple" }
+    ],
+    "target": false
+  },
+  {
+    "link": "https://github.com/brunopinto22/SOBay",
+    "nome": "SOBay",
+    "img": "SOBay.png",
+    "maintag": [
+      { "name": "university", "color": "red" },
+      { "name": "terminal", "color": "green" }
+    ],
+    "sctag": [
+      { "name": "C", "color": "blue" },
+      { "name": "Linux", "color": "green" }
+    ],
+    "target": true
+  },
+  {
+    "link": "https://brunopinto22.github.io/REMAX-Website/",
+    "nome": "REMAX copy",
+    "img": "REMAX.png",
+    "maintag": [
+      { "name": "university", "color": "red" },
+      { "name": "website", "color": "blue" }
+    ],
+    "sctag": [
+      { "name": "HTML", "color": "red" },
+      { "name": "CSS", "color": "blue" },
+      { "name": "Javascript", "color": "default" }
+    ],
+    "target": true
+  }
+]
+
+
+
