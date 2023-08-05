@@ -170,14 +170,14 @@ document.getElementById("game").addEventListener("click",function gameopened(){
 document.getElementById("pfp").addEventListener("click",function pfpclicked(){
   if(i == 0){
     achivements++;
-    document.getElementById("pfp").src = "assets\\img\\pfp2.png";
+    document.getElementById("pfp").src = ".\\src\\assets\\img\\pfp2.png";
     calleaster();
     i++;
   } else if(i % 2 != 0){
-    document.getElementById("pfp").src = "assets\\img\\pfp.png";
+    document.getElementById("pfp").src = ".\\src\\assets\\img\\pfp.png";
     i++;
   } else {
-    document.getElementById("pfp").src = "assets\\img\\pfp2.png";
+    document.getElementById("pfp").src = ".\\src\\assets\\img\\pfp2.png";
     i++;
   }
 });
