@@ -44,6 +44,13 @@
   html .button_extra:hover span, body .button_extra:hover span {
     padding-right: 20px;
   }
+  html .modal, body .modal {
+    padding: 2vh 4vw;
+    border-radius: 15px;
+  }
+  html .modal button, body .modal button {
+    margin: 2vh 1vw;
+  }
   header nav {
     grid-template-columns: 1fr 1fr;
     padding: 3vh 5vw;
@@ -741,6 +748,16 @@ html .button:hover, body .button:hover {
   background-color: #fed259;
   color: #3a3a3a;
 }
+html .button-scnd, body .button-scnd {
+  background-color: #fed259;
+  color: #3a3a3a;
+  transition: all 0.5s;
+}
+html .button-scnd:hover, body .button-scnd:hover {
+  transition: all 0.2s;
+  background-color: #fee49b;
+  border-color: #fee49b;
+}
 html .link, body .link {
   position: relative;
   z-index: 1;
@@ -881,6 +898,24 @@ html .easteregg span, html .nowplaying span, html .notification span, body .east
 html .easteregg a, html .nowplaying a, html .notification a, body .easteregg a, body .nowplaying a, body .notification a {
   color: #fed259;
   font-weight: 300;
+}
+html .modal-container, body .modal-container {
+  position: fixed;
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(9, 9, 9, 0.9);
+  z-index: 5;
+}
+html .modal, body .modal {
+  background-color: #3a3a3a;
+  box-shadow: 0px 0px 50px -2px rgb(0, 0, 0);
+  -webkit-box-shadow: 0px 0px 50px -2px rgb(0, 0, 0);
+  -moz-box-shadow: 0px 0px 50px -2px rgb(0, 0, 0);
 }
 html .notification, body .notification {
   background-color: #5af59a;
@@ -1092,6 +1127,13 @@ html .container .about .me, body .container .about .me {
 html .container .about .me img, body .container .about .me img {
   border: 5px solid #fed259;
   height: auto;
+  transition: all 0.2s ease-in-out;
+}
+html .container .about .me img:hover, body .container .about .me img:hover {
+  box-shadow: 0 0 15px 0 rgba(254, 210, 89, 0.4);
+  -webkit-box-shadow: 0 0 15px 0 rgba(254, 210, 89, 0.4);
+  -moz-box-shadow: 0 0 15px 0 rgba(254, 210, 89, 0.4);
+  transition: all 0.2s ease-in-out;
 }
 html .container .contact, body .container .contact {
   background-image: linear-gradient(180deg, #3a3a3a 0%, rgba(58, 58, 58, 0.9) 50%, #3a3a3a 100%);
