@@ -40,7 +40,7 @@ const init = () => {
       console.log('Its HALLOWEEN');
     break;
     default:
-      avatar = avatar = ".\\src\\assets\\img\\avatars\\avatar.png";
+      avatar = ".\\src\\assets\\img\\avatars\\avatar.png";
       console.log('hello :)');
   }
   document.getElementById("avatar").src = avatar;
