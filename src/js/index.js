@@ -30,7 +30,9 @@ document.getElementById('open').addEventListener("click", () => {
 
 
 const init = () => {
-
+  // default value
+  avatar = ".\\src\\assets\\img\\avatars\\avatar.png";
+  
   // verify day
   switch(verifyEvent(day,month)){
     case 'XMAS':
